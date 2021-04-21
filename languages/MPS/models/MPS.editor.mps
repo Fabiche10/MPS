@@ -82,5 +82,26 @@
       <node concept="2iRkQZ" id="2PYiJ0UvPB7" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="2PYiJ0Uw1OU">
+    <ref role="1XX52x" to="r95f:2PYiJ0UvY16" resolve="Nombre" />
+    <node concept="3F0A7n" id="2PYiJ0Uw1OW" role="2wV5jI">
+      <ref role="1NtTu8" to="r95f:2PYiJ0UvY1b" resolve="valeur" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2PYiJ0Uw1P6">
+    <ref role="1XX52x" to="r95f:2PYiJ0UvY18" resolve="Addition" />
+    <node concept="3EZMnI" id="2PYiJ0Uw1Pr" role="2wV5jI">
+      <node concept="3F0A7n" id="2PYiJ0Uw4iG" role="3EZMnx">
+        <ref role="1NtTu8" to="r95f:2PYiJ0Uw1R7" resolve="a" />
+      </node>
+      <node concept="3F0ifn" id="2PYiJ0Uw1Q$" role="3EZMnx">
+        <property role="3F0ifm" value="+" />
+      </node>
+      <node concept="3F0A7n" id="2PYiJ0Uw4iL" role="3EZMnx">
+        <ref role="1NtTu8" to="r95f:2PYiJ0Uw1Rd" resolve="b" />
+      </node>
+      <node concept="2iRfu4" id="2PYiJ0Uw1Pu" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

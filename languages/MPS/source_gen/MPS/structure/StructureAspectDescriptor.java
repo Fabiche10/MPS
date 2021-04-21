@@ -80,6 +80,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("MPS.structure.OperationBinaire", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe047L);
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365256");
     b.version(2);
+    b.property("a", 0x2d7e4af03a801dc7L).type(PrimitiveTypeId.INTEGER).origin("3278139974406380999").done();
+    b.property("b", 0x2d7e4af03a801dcdL).type(PrimitiveTypeId.INTEGER).origin("3278139974406381005").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDeclarationVariable() {

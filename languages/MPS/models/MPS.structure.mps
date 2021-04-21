@@ -112,6 +112,16 @@
     <property role="EcuMT" value="3278139974406365256" />
     <property role="TrG5h" value="Addition" />
     <ref role="1TJDcQ" node="2PYiJ0UvY17" resolve="OperationBinaire" />
+    <node concept="1TJgyi" id="2PYiJ0Uw1R7" role="1TKVEl">
+      <property role="IQ2nx" value="3278139974406380999" />
+      <property role="TrG5h" value="a" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="2PYiJ0Uw1Rd" role="1TKVEl">
+      <property role="IQ2nx" value="3278139974406381005" />
+      <property role="TrG5h" value="b" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2PYiJ0UvY19">
     <property role="EcuMT" value="3278139974406365257" />
