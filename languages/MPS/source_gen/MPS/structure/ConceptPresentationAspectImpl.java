@@ -10,6 +10,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Addition;
+  private ConceptPresentation props_Chaine;
   private ConceptPresentation props_DeclarationVariable;
   private ConceptPresentation props_Egalite;
   private ConceptPresentation props_Expression;
@@ -32,6 +33,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Addition = cpb.create();
         }
         return props_Addition;
+      case LanguageConceptSwitch.Chaine:
+        if (props_Chaine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Chaine");
+          props_Chaine = cpb.create();
+        }
+        return props_Chaine;
       case LanguageConceptSwitch.DeclarationVariable:
         if (props_DeclarationVariable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

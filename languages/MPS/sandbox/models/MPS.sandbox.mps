@@ -20,6 +20,9 @@
         <property id="3278139974406380999" name="a" index="nZ_sR" />
         <property id="3278139974406381005" name="b" index="nZ_sX" />
       </concept>
+      <concept id="3278139974406449760" name="MPS.structure.Chaine" flags="ng" index="nZQ2g">
+        <property id="3278139974406449761" name="valeur" index="nZQ2h" />
+      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -46,6 +49,12 @@
       <node concept="n0qES" id="2PYiJ0Uw7zZ" role="n0gkt">
         <property role="nZ_sR" value="12" />
         <property role="nZ_sX" value="42" />
+      </node>
+    </node>
+    <node concept="n0g5y" id="2PYiJ0UwwLr" role="n0g5C">
+      <property role="TrG5h" value="chaine" />
+      <node concept="nZQ2g" id="2PYiJ0UwwLB" role="n0gkt">
+        <property role="nZQ2h" value="test" />
       </node>
     </node>
   </node>

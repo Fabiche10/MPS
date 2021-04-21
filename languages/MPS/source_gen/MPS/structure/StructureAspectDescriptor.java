@@ -14,6 +14,7 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAddition = createDescriptorForAddition();
+  /*package*/ final ConceptDescriptor myConceptChaine = createDescriptorForChaine();
   /*package*/ final ConceptDescriptor myConceptDeclarationVariable = createDescriptorForDeclarationVariable();
   /*package*/ final ConceptDescriptor myConceptEgalite = createDescriptorForEgalite();
   /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
@@ -37,7 +38,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAddition, myConceptDeclarationVariable, myConceptEgalite, myConceptExpression, myConceptInstruction, myConceptMultiplication, myConceptNombre, myConceptOperationBinaire, myConceptProgramme, myConceptRefVariable);
+    return Arrays.asList(myConceptAddition, myConceptChaine, myConceptDeclarationVariable, myConceptEgalite, myConceptExpression, myConceptInstruction, myConceptMultiplication, myConceptNombre, myConceptOperationBinaire, myConceptProgramme, myConceptRefVariable);
   }
 
   @Override
@@ -46,6 +47,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.Addition:
         return myConceptAddition;
+      case LanguageConceptSwitch.Chaine:
+        return myConceptChaine;
       case LanguageConceptSwitch.DeclarationVariable:
         return myConceptDeclarationVariable;
       case LanguageConceptSwitch.Egalite:
@@ -83,6 +86,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("a", 0x2d7e4af03a801dc7L).type(PrimitiveTypeId.INTEGER).origin("3278139974406380999").done();
     b.property("b", 0x2d7e4af03a801dcdL).type(PrimitiveTypeId.INTEGER).origin("3278139974406381005").done();
     b.alias("+");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForChaine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "Chaine", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a812a60L);
+    b.class_(false, false, false);
+    b.super_("MPS.structure.Expression", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L);
+    b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406449760");
+    b.version(2);
+    b.property("valeur", 0x2d7e4af03a812a61L).type(PrimitiveTypeId.STRING).origin("3278139974406449761").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDeclarationVariable() {

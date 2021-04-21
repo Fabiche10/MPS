@@ -25,7 +25,15 @@
       <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
         <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
+      <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
+        <property id="1186414551515" name="flag" index="VOm3f" />
+      </concept>
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
+      <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
+      <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
+      <concept id="1381004262292414836" name="jetbrains.mps.lang.editor.structure.ICellStyle" flags="ng" index="1k5N5V">
+        <reference id="1381004262292426837" name="parentStyleClass" index="1k5W1q" />
+      </concept>
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
@@ -120,6 +128,29 @@
         <ref role="1NtTu8" to="r95f:2PYiJ0Uwe7_" resolve="droite" />
       </node>
       <node concept="2iRfu4" id="2PYiJ0Uwe7v" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2PYiJ0UwiDE">
+    <ref role="1XX52x" to="r95f:2PYiJ0UwiDw" resolve="Chaine" />
+    <node concept="3EZMnI" id="2PYiJ0UwiDG" role="2wV5jI">
+      <node concept="3F0ifn" id="2PYiJ0UwiDQ" role="3EZMnx">
+        <property role="3F0ifm" value="&quot;" />
+        <ref role="1k5W1q" to="tpco:hshO_Yc" resolve="StubImplementation" />
+        <node concept="11LMrY" id="2PYiJ0Uws4z" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="2PYiJ0UwiDW" role="3EZMnx">
+        <ref role="1NtTu8" to="r95f:2PYiJ0UwiDx" resolve="valeur" />
+      </node>
+      <node concept="3F0ifn" id="2PYiJ0UwiE4" role="3EZMnx">
+        <property role="3F0ifm" value="&quot;" />
+        <ref role="1k5W1q" to="tpco:hshO_Yc" resolve="StubImplementation" />
+        <node concept="11L4FC" id="2PYiJ0Uws4_" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="2iRfu4" id="2PYiJ0UwiDJ" role="2iSdaV" />
     </node>
   </node>
 </model>
