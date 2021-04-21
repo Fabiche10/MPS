@@ -10,7 +10,6 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
-import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDeclarationVariable = createDescriptorForDeclarationVariable();
@@ -68,10 +67,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "Expression", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406328292");
     b.version(2);
-    b.property("valeur", 0x2d7e4af03a7f4fe5L).type(PrimitiveTypeId.INTEGER).origin("3278139974406328293").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForInstruction() {

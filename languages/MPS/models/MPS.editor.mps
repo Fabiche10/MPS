@@ -18,7 +18,6 @@
       </concept>
       <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
-      <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
@@ -44,15 +43,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="24kQdi" id="2PYiJ0UvP_D">
-    <ref role="1XX52x" to="r95f:2PYiJ0UvOZ$" resolve="Expression" />
-    <node concept="3EZMnI" id="2PYiJ0UvP_F" role="2wV5jI">
-      <node concept="3F0A7n" id="2PYiJ0UvP_P" role="3EZMnx">
-        <ref role="1NtTu8" to="r95f:2PYiJ0UvOZ_" resolve="valeur" />
-      </node>
-      <node concept="l2Vlx" id="2PYiJ0UvP_I" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="2PYiJ0UvP_Z">
     <ref role="1XX52x" to="r95f:2PYiJ0UvOIi" resolve="DeclarationVariable" />
     <node concept="3EZMnI" id="2PYiJ0UvPAc" role="2wV5jI">
