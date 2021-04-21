@@ -82,6 +82,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("a", 0x2d7e4af03a801dc7L).type(PrimitiveTypeId.INTEGER).origin("3278139974406380999").done();
     b.property("b", 0x2d7e4af03a801dcdL).type(PrimitiveTypeId.INTEGER).origin("3278139974406381005").done();
+    b.alias("+");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDeclarationVariable() {
@@ -92,6 +93,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406327186");
     b.version(2);
     b.aggregate("valeur", 0x2d7e4af03a7f4fedL).target(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L).optional(false).ordered(true).multiple(false).origin("3278139974406328301").done();
+    b.alias("var");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForEgalite() {
@@ -100,6 +102,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("MPS.structure.OperationBinaire", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe047L);
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365258");
     b.version(2);
+    b.alias("==");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForExpression() {
@@ -122,6 +125,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("MPS.structure.OperationBinaire", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe047L);
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365257");
     b.version(2);
+    b.alias("*");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForNombre() {

@@ -28,7 +28,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Addition:
         if (props_Addition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Addition");
+          cpb.rawPresentation("+");
           props_Addition = cpb.create();
         }
         return props_Addition;
@@ -42,7 +42,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Egalite:
         if (props_Egalite == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Egalite");
+          cpb.rawPresentation("==");
           props_Egalite = cpb.create();
         }
         return props_Egalite;
@@ -61,7 +61,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Multiplication:
         if (props_Multiplication == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Multiplication");
+          cpb.rawPresentation("*");
           props_Multiplication = cpb.create();
         }
         return props_Multiplication;

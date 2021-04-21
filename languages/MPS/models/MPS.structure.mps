@@ -13,6 +13,7 @@
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765956802" name="abstract" index="R5$K7" />
+        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -51,6 +52,7 @@
   <node concept="1TIwiD" id="2PYiJ0UvOIi">
     <property role="EcuMT" value="3278139974406327186" />
     <property role="TrG5h" value="DeclarationVariable" />
+    <property role="34LRSv" value="var" />
     <ref role="1TJDcQ" node="2PYiJ0UvOIh" resolve="Instruction" />
     <node concept="1TJgyj" id="2PYiJ0UvOZH" role="1TKVEi">
       <property role="IQ2ns" value="3278139974406328301" />
@@ -111,6 +113,7 @@
   <node concept="1TIwiD" id="2PYiJ0UvY18">
     <property role="EcuMT" value="3278139974406365256" />
     <property role="TrG5h" value="Addition" />
+    <property role="34LRSv" value="+" />
     <ref role="1TJDcQ" node="2PYiJ0UvY17" resolve="OperationBinaire" />
     <node concept="1TJgyi" id="2PYiJ0Uw1R7" role="1TKVEl">
       <property role="IQ2nx" value="3278139974406380999" />
@@ -126,11 +129,13 @@
   <node concept="1TIwiD" id="2PYiJ0UvY19">
     <property role="EcuMT" value="3278139974406365257" />
     <property role="TrG5h" value="Multiplication" />
+    <property role="34LRSv" value="*" />
     <ref role="1TJDcQ" node="2PYiJ0UvY17" resolve="OperationBinaire" />
   </node>
   <node concept="1TIwiD" id="2PYiJ0UvY1a">
     <property role="EcuMT" value="3278139974406365258" />
     <property role="TrG5h" value="Egalite" />
+    <property role="34LRSv" value="==" />
     <ref role="1TJDcQ" node="2PYiJ0UvY17" resolve="OperationBinaire" />
   </node>
 </model>
