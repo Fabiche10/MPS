@@ -109,6 +109,16 @@
     <property role="EcuMT" value="3278139974406365255" />
     <property role="TrG5h" value="OperationBinaire" />
     <ref role="1TJDcQ" node="2PYiJ0UvOZ$" resolve="Expression" />
+    <node concept="1TJgyi" id="2PYiJ0Uwe7z" role="1TKVEl">
+      <property role="IQ2nx" value="3278139974406431203" />
+      <property role="TrG5h" value="gauche" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="2PYiJ0Uwe7_" role="1TKVEl">
+      <property role="IQ2nx" value="3278139974406431205" />
+      <property role="TrG5h" value="droite" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2PYiJ0UvY18">
     <property role="EcuMT" value="3278139974406365256" />

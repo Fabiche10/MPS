@@ -9,6 +9,7 @@
   <imports>
     <import index="r95f" ref="r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -20,6 +21,9 @@
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
+      </concept>
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
@@ -101,6 +105,21 @@
         <ref role="1NtTu8" to="r95f:2PYiJ0Uw1Rd" resolve="b" />
       </node>
       <node concept="2iRfu4" id="2PYiJ0Uw1Pu" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2PYiJ0Uwe7q">
+    <ref role="1XX52x" to="r95f:2PYiJ0UvY17" resolve="OperationBinaire" />
+    <node concept="3EZMnI" id="2PYiJ0Uwe7s" role="2wV5jI">
+      <node concept="3F0A7n" id="2PYiJ0Uwe7C" role="3EZMnx">
+        <ref role="1NtTu8" to="r95f:2PYiJ0Uwe7z" resolve="gauche" />
+      </node>
+      <node concept="PMmxH" id="2PYiJ0Uwe7M" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="3F0A7n" id="2PYiJ0Uwe7T" role="3EZMnx">
+        <ref role="1NtTu8" to="r95f:2PYiJ0Uwe7_" resolve="droite" />
+      </node>
+      <node concept="2iRfu4" id="2PYiJ0Uwe7v" role="2iSdaV" />
     </node>
   </node>
 </model>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="4p9vkk79z7e0uraxsnfzy1r30j2o76f">
-  <files names="Addition_Editor.java:Addition_EditorBuilder_a.java:DeclarationVariable_Editor.java:DeclarationVariable_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:Nombre_Editor.java:Nombre_EditorBuilder_a.java:Programme_Editor.java:Programme_EditorBuilder_a.java" />
+<product version="3" modelHash="d8h23nh88f92nrb9n6pyv8e5xrwcnck">
+  <files names="Addition_Editor.java:Addition_EditorBuilder_a.java:DeclarationVariable_Editor.java:DeclarationVariable_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:Nombre_Editor.java:Nombre_EditorBuilder_a.java:OperationBinaire_Editor.java:OperationBinaire_EditorBuilder_a.java:Programme_Editor.java:Programme_EditorBuilder_a.java" />
 </product>
 

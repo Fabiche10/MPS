@@ -143,6 +143,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("MPS.structure.Expression", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L);
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365255");
     b.version(2);
+    b.property("gauche", 0x2d7e4af03a80e1e3L).type(PrimitiveTypeId.INTEGER).origin("3278139974406431203").done();
+    b.property("droite", 0x2d7e4af03a80e1e5L).type(PrimitiveTypeId.INTEGER).origin("3278139974406431205").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProgramme() {
