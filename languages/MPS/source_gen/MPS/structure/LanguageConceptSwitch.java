@@ -9,17 +9,29 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int DeclarationVariable = 0;
-  public static final int Expression = 1;
-  public static final int Instruction = 2;
-  public static final int Programme = 3;
+  public static final int Addition = 0;
+  public static final int DeclarationVariable = 1;
+  public static final int Egalite = 2;
+  public static final int Expression = 3;
+  public static final int Instruction = 4;
+  public static final int Multiplication = 5;
+  public static final int Nombre = 6;
+  public static final int OperationBinaire = 7;
+  public static final int Programme = 8;
+  public static final int RefVariable = 9;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L);
+    builder.put(0x2d7e4af03a7fe048L, Addition);
     builder.put(0x2d7e4af03a7f4b92L, DeclarationVariable);
+    builder.put(0x2d7e4af03a7fe04aL, Egalite);
     builder.put(0x2d7e4af03a7f4fe4L, Expression);
     builder.put(0x2d7e4af03a7f4b91L, Instruction);
+    builder.put(0x2d7e4af03a7fe049L, Multiplication);
+    builder.put(0x2d7e4af03a7fe046L, Nombre);
+    builder.put(0x2d7e4af03a7fe047L, OperationBinaire);
     builder.put(0x2d7e4af03a7f4b95L, Programme);
+    builder.put(0x2d7e4af03a7fe045L, RefVariable);
     myIndex = builder.seal();
   }
 

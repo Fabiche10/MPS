@@ -10,12 +10,19 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
+import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptAddition = createDescriptorForAddition();
   /*package*/ final ConceptDescriptor myConceptDeclarationVariable = createDescriptorForDeclarationVariable();
+  /*package*/ final ConceptDescriptor myConceptEgalite = createDescriptorForEgalite();
   /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
   /*package*/ final ConceptDescriptor myConceptInstruction = createDescriptorForInstruction();
+  /*package*/ final ConceptDescriptor myConceptMultiplication = createDescriptorForMultiplication();
+  /*package*/ final ConceptDescriptor myConceptNombre = createDescriptorForNombre();
+  /*package*/ final ConceptDescriptor myConceptOperationBinaire = createDescriptorForOperationBinaire();
   /*package*/ final ConceptDescriptor myConceptProgramme = createDescriptorForProgramme();
+  /*package*/ final ConceptDescriptor myConceptRefVariable = createDescriptorForRefVariable();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -30,21 +37,33 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptDeclarationVariable, myConceptExpression, myConceptInstruction, myConceptProgramme);
+    return Arrays.asList(myConceptAddition, myConceptDeclarationVariable, myConceptEgalite, myConceptExpression, myConceptInstruction, myConceptMultiplication, myConceptNombre, myConceptOperationBinaire, myConceptProgramme, myConceptRefVariable);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.Addition:
+        return myConceptAddition;
       case LanguageConceptSwitch.DeclarationVariable:
         return myConceptDeclarationVariable;
+      case LanguageConceptSwitch.Egalite:
+        return myConceptEgalite;
       case LanguageConceptSwitch.Expression:
         return myConceptExpression;
       case LanguageConceptSwitch.Instruction:
         return myConceptInstruction;
+      case LanguageConceptSwitch.Multiplication:
+        return myConceptMultiplication;
+      case LanguageConceptSwitch.Nombre:
+        return myConceptNombre;
+      case LanguageConceptSwitch.OperationBinaire:
+        return myConceptOperationBinaire;
       case LanguageConceptSwitch.Programme:
         return myConceptProgramme;
+      case LanguageConceptSwitch.RefVariable:
+        return myConceptRefVariable;
       default:
         return null;
     }
@@ -55,6 +74,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForAddition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "Addition", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe048L);
+    b.class_(false, false, false);
+    b.super_("MPS.structure.OperationBinaire", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe047L);
+    b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365256");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForDeclarationVariable() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "DeclarationVariable", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4b92L);
     b.class_(false, false, false);
@@ -63,6 +90,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406327186");
     b.version(2);
     b.aggregate("valeur", 0x2d7e4af03a7f4fedL).target(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L).optional(false).ordered(true).multiple(false).origin("3278139974406328301").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEgalite() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "Egalite", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe04aL);
+    b.class_(false, false, false);
+    b.super_("MPS.structure.OperationBinaire", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe047L);
+    b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365258");
+    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForExpression() {
@@ -79,6 +114,31 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForMultiplication() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "Multiplication", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe049L);
+    b.class_(false, false, false);
+    b.super_("MPS.structure.OperationBinaire", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe047L);
+    b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365257");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForNombre() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "Nombre", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe046L);
+    b.class_(false, false, false);
+    b.super_("MPS.structure.Expression", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L);
+    b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365254");
+    b.version(2);
+    b.property("valeur", 0x2d7e4af03a7fe04bL).type(PrimitiveTypeId.STRING).origin("3278139974406365259").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOperationBinaire() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "OperationBinaire", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe047L);
+    b.class_(false, false, false);
+    b.super_("MPS.structure.Expression", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L);
+    b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365255");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForProgramme() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "Programme", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4b95L);
     b.class_(false, false, true);
@@ -86,6 +146,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406327189");
     b.version(2);
     b.aggregate("instructions", 0x2d7e4af03a7f4b98L).target(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4b91L).optional(false).ordered(true).multiple(true).origin("3278139974406327192").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRefVariable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "RefVariable", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe045L);
+    b.class_(false, false, false);
+    b.super_("MPS.structure.Expression", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365253");
+    b.version(2);
     return b.create();
   }
 }
