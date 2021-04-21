@@ -16,6 +16,7 @@
   <imports>
     <import index="r95f" ref="r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -67,6 +68,27 @@
                 <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String)" resolve="matches" />
                 <node concept="Xl_RD" id="2PYiJ0UwxF9" role="37wK5m">
                   <property role="Xl_RC" value="-?[0-9]+(,[0-9]+)?" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2PYiJ0UwAZI">
+    <ref role="1M2myG" to="r95f:2PYiJ0UvOIi" resolve="DeclarationVariable" />
+    <node concept="EnEH3" id="2PYiJ0UwAZJ" role="1MhHOB">
+      <ref role="EomxK" to="tpck:h0TrG11" resolve="name" />
+      <node concept="QB0g5" id="2PYiJ0UwB13" role="QCWH9">
+        <node concept="3clFbS" id="2PYiJ0UwB14" role="2VODD2">
+          <node concept="3clFbF" id="2PYiJ0UwB5B" role="3cqZAp">
+            <node concept="2OqwBi" id="2PYiJ0UwBvz" role="3clFbG">
+              <node concept="1Wqviy" id="2PYiJ0UwB5A" role="2Oq$k0" />
+              <node concept="liA8E" id="2PYiJ0UwBJ8" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String)" resolve="matches" />
+                <node concept="Xl_RD" id="2PYiJ0UwBL5" role="37wK5m">
+                  <property role="Xl_RC" value="^[a-zA-Z -]*$" />
                 </node>
               </node>
             </node>
