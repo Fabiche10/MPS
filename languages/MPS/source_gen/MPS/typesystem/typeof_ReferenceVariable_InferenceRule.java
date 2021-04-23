@@ -12,6 +12,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class typeof_ReferenceVariable_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
@@ -21,7 +22,7 @@ public class typeof_ReferenceVariable_InferenceRule extends AbstractInferenceRul
     {
       SNode _nodeToCheck_1029348928467 = referenceVariable;
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035301675", 0, null);
-      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035301009", true), (SNode) typeCheckingContext.typeOf(SLinkOperations.getTarget(referenceVariable, LINKS.variable$Gjig), "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035303135", true), _info_12389875345);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035301009", true), (SNode) typeCheckingContext.typeOf(SLinkOperations.getTarget(SLinkOperations.getTarget(referenceVariable, LINKS.variable$Gjig), LINKS.valeur$eNWJ), "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035303135", true), _info_12389875345);
     }
   }
   public SAbstractConcept getApplicableConcept() {
@@ -36,6 +37,7 @@ public class typeof_ReferenceVariable_InferenceRule extends AbstractInferenceRul
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink variable$Gjig = MetaAdapterFactory.getReferenceLink(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe045L, 0x484d0cab02d382dL, "variable");
+    /*package*/ static final SContainmentLink valeur$eNWJ = MetaAdapterFactory.getContainmentLink(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4b92L, 0x2d7e4af03a7f4fedL, "valeur");
   }
 
   private static final class CONCEPTS {
