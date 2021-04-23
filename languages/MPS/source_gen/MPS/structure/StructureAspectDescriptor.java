@@ -24,7 +24,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptNombre = createDescriptorForNombre();
   /*package*/ final ConceptDescriptor myConceptOperationBinaire = createDescriptorForOperationBinaire();
   /*package*/ final ConceptDescriptor myConceptProgramme = createDescriptorForProgramme();
-  /*package*/ final ConceptDescriptor myConceptRefVariable = createDescriptorForRefVariable();
+  /*package*/ final ConceptDescriptor myConceptReferenceVariable = createDescriptorForReferenceVariable();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -39,7 +39,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAddition, myConceptChaine, myConceptDeclarationVariable, myConceptEgalite, myConceptExpression, myConceptInstruction, myConceptLigneVide, myConceptMultiplication, myConceptNombre, myConceptOperationBinaire, myConceptProgramme, myConceptRefVariable);
+    return Arrays.asList(myConceptAddition, myConceptChaine, myConceptDeclarationVariable, myConceptEgalite, myConceptExpression, myConceptInstruction, myConceptLigneVide, myConceptMultiplication, myConceptNombre, myConceptOperationBinaire, myConceptProgramme, myConceptReferenceVariable);
   }
 
   @Override
@@ -68,8 +68,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptOperationBinaire;
       case LanguageConceptSwitch.Programme:
         return myConceptProgramme;
-      case LanguageConceptSwitch.RefVariable:
-        return myConceptRefVariable;
+      case LanguageConceptSwitch.ReferenceVariable:
+        return myConceptReferenceVariable;
       default:
         return null;
     }
@@ -178,13 +178,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("instructions", 0x2d7e4af03a7f4b98L).target(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4b91L).optional(false).ordered(true).multiple(true).origin("3278139974406327192").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForRefVariable() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "RefVariable", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe045L);
+  private static ConceptDescriptor createDescriptorForReferenceVariable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "ReferenceVariable", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe045L);
     b.class_(false, false, false);
     b.super_("MPS.structure.Expression", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365253");
     b.version(2);
+    b.associate("variable", 0x484d0cab02d382dL).target(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4b92L).optional(false).origin("325614642035243053").done();
     return b.create();
   }
 }

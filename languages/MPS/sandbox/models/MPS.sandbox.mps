@@ -13,6 +13,9 @@
       <concept id="3278139974406327189" name="MPS.structure.Programme" flags="ng" index="n0g5_">
         <child id="3278139974406327192" name="instructions" index="n0g5C" />
       </concept>
+      <concept id="3278139974406365253" name="MPS.structure.ReferenceVariable" flags="ng" index="n0qEP">
+        <reference id="325614642035243053" name="variable" index="2OEuzB" />
+      </concept>
       <concept id="3278139974406365254" name="MPS.structure.Nombre" flags="ng" index="n0qEQ">
         <property id="3278139974406365259" name="valeur" index="n0qEV" />
       </concept>
@@ -21,7 +24,6 @@
         <child id="3278139974406602388" name="droite" index="nZjh$" />
       </concept>
       <concept id="3278139974406365256" name="MPS.structure.Addition" flags="ng" index="n0qES" />
-      <concept id="3278139974406601340" name="MPS.structure.LigneVide" flags="ng" index="nZj2c" />
       <concept id="3278139974406449760" name="MPS.structure.Chaine" flags="ng" index="nZQ2g">
         <property id="3278139974406449761" name="valeur" index="nZQ2h" />
       </concept>
@@ -69,7 +71,12 @@
         <property role="n0qEV" value="15" />
       </node>
     </node>
-    <node concept="nZj2c" id="i4OcEKb0gx" role="n0g5C" />
+    <node concept="n0g5y" id="i4OcEKbxD6" role="n0g5C">
+      <property role="TrG5h" value="nombres" />
+      <node concept="n0qEP" id="i4OcEKbCsX" role="n0gkt">
+        <ref role="2OEuzB" node="2PYiJ0Uw1Qd" resolve="b" />
+      </node>
+    </node>
   </node>
 </model>
 

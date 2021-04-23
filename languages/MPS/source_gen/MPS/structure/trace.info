@@ -15,7 +15,7 @@
       <unit at="10,0,50,0" name="MPS.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="15,0,191,0" name="MPS.structure.StructureAspectDescriptor" />
+      <unit at="15,0,192,0" name="MPS.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406327185">
@@ -156,37 +156,38 @@
   </root>
   <root nodeRef="r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365253">
     <file name="ConceptPresentationAspectImpl.java">
-      <node id="3278139974406365253" at="23,0,24,0" concept="1" trace="props_RefVariable" />
-      <node id="3278139974406365253" at="106,40,107,76" concept="3" />
+      <node id="3278139974406365253" at="23,0,24,0" concept="1" trace="props_ReferenceVariable" />
+      <node id="3278139974406365253" at="106,46,107,76" concept="3" />
       <node id="3278139974406365253" at="107,76,108,35" concept="0" />
-      <node id="3278139974406365253" at="108,35,109,43" concept="0" />
-      <node id="3278139974406365253" at="110,9,111,33" concept="4" />
-      <node id="3278139974406365253" at="105,45,110,9" concept="2" />
-      <scope id="3278139974406365253" at="106,40,109,43">
+      <node id="3278139974406365253" at="108,35,109,49" concept="0" />
+      <node id="3278139974406365253" at="110,9,111,39" concept="4" />
+      <node id="3278139974406365253" at="105,51,110,9" concept="2" />
+      <scope id="3278139974406365253" at="106,46,109,49">
         <var name="cpb" id="3278139974406365253" />
       </scope>
-      <scope id="3278139974406365253" at="105,45,111,33" />
+      <scope id="3278139974406365253" at="105,51,111,39" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="3278139974406365253" at="23,0,24,0" concept="5" trace="RefVariable" />
-      <node id="3278139974406365253" at="37,48,38,50" concept="0" />
+      <node id="3278139974406365253" at="23,0,24,0" concept="5" trace="ReferenceVariable" />
+      <node id="3278139974406365253" at="37,48,38,56" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <node id="3278139974406365253" at="27,0,28,0" concept="1" trace="myConceptRefVariable" />
-      <node id="3278139974406365253" at="71,45,72,36" concept="4" />
-      <node id="3278139974406365253" at="181,69,182,149" concept="3" />
-      <node id="3278139974406365253" at="182,149,183,34" concept="0" />
+      <node id="3278139974406365253" at="27,0,28,0" concept="1" trace="myConceptReferenceVariable" />
+      <node id="3278139974406365253" at="71,51,72,42" concept="4" />
+      <node id="3278139974406365253" at="181,75,182,155" concept="3" />
+      <node id="3278139974406365253" at="182,155,183,34" concept="0" />
       <node id="3278139974406365253" at="183,34,184,104" concept="0" />
       <node id="3278139974406365253" at="184,104,185,71" concept="0" />
       <node id="3278139974406365253" at="185,71,186,90" concept="0" />
       <node id="3278139974406365253" at="186,90,187,17" concept="0" />
-      <node id="3278139974406365253" at="187,17,188,22" concept="4" />
-      <node id="3278139974406365253" at="181,0,190,0" concept="6" trace="createDescriptorForRefVariable#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
-      <scope id="3278139974406365253" at="71,45,72,36" />
-      <scope id="3278139974406365253" at="181,69,188,22">
+      <node id="325614642035243053" at="187,17,188,170" concept="0" />
+      <node id="3278139974406365253" at="188,170,189,22" concept="4" />
+      <node id="3278139974406365253" at="181,0,191,0" concept="6" trace="createDescriptorForReferenceVariable#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="3278139974406365253" at="71,51,72,42" />
+      <scope id="3278139974406365253" at="181,75,189,22">
         <var name="b" id="3278139974406365253" />
       </scope>
-      <scope id="3278139974406365253" at="181,0,190,0" />
+      <scope id="3278139974406365253" at="181,0,191,0" />
     </file>
   </root>
   <root nodeRef="r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365254">

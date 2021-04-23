@@ -456,5 +456,35 @@
       <ref role="1YaFvo" to="r95f:2PYiJ0UvOIi" resolve="DeclarationVariable" />
     </node>
   </node>
+  <node concept="1YbPZF" id="i4OcEKbxEa">
+    <property role="TrG5h" value="typeof_ReferenceVariable" />
+    <node concept="3clFbS" id="i4OcEKbxEb" role="18ibNy">
+      <node concept="1Z5TYs" id="i4OcEKbxOF" role="3cqZAp">
+        <node concept="mw_s8" id="i4OcEKbxOX" role="1ZfhKB">
+          <node concept="1Z2H0r" id="i4OcEKbybv" role="mwGJk">
+            <node concept="2OqwBi" id="i4OcEKbyek" role="1Z2MuG">
+              <node concept="1YBJjd" id="i4OcEKbybX" role="2Oq$k0">
+                <ref role="1YBMHb" node="i4OcEKbxEd" resolve="referenceVariable" />
+              </node>
+              <node concept="3TrEf2" id="i4OcEKbyfs" role="2OqNvi">
+                <ref role="3Tt5mk" to="r95f:i4OcEKbjwH" resolve="variable" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="i4OcEKbxOI" role="1ZfhK$">
+          <node concept="1Z2H0r" id="i4OcEKbxEh" role="mwGJk">
+            <node concept="1YBJjd" id="i4OcEKbxG5" role="1Z2MuG">
+              <ref role="1YBMHb" node="i4OcEKbxEd" resolve="referenceVariable" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="i4OcEKbxEd" role="1YuTPh">
+      <property role="TrG5h" value="referenceVariable" />
+      <ref role="1YaFvo" to="r95f:2PYiJ0UvY15" resolve="ReferenceVariable" />
+    </node>
+  </node>
 </model>
 
