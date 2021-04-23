@@ -39,7 +39,7 @@ public class DeclarationVariable_Constraints extends BaseConstraintsDescriptor {
       return result;
     }
     private static boolean staticValidateProperty(SNode node, String propertyValue) {
-      return propertyValue.matches("^[a-zA-Z -]*$");
+      return propertyValue.matches("^[a-zA-Z_$]*$");
     }
   }
   @Override

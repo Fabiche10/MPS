@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class Addition_Editor extends DefaultNodeEditor {
+public class LigneVide_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new Addition_EditorBuilder_a(editorContext, node).createCell();
+    return new LigneVide_EditorBuilder_a(editorContext, node).createCell();
   }
 }

@@ -19,6 +19,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEgalite = createDescriptorForEgalite();
   /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
   /*package*/ final ConceptDescriptor myConceptInstruction = createDescriptorForInstruction();
+  /*package*/ final ConceptDescriptor myConceptLigneVide = createDescriptorForLigneVide();
   /*package*/ final ConceptDescriptor myConceptMultiplication = createDescriptorForMultiplication();
   /*package*/ final ConceptDescriptor myConceptNombre = createDescriptorForNombre();
   /*package*/ final ConceptDescriptor myConceptOperationBinaire = createDescriptorForOperationBinaire();
@@ -38,7 +39,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAddition, myConceptChaine, myConceptDeclarationVariable, myConceptEgalite, myConceptExpression, myConceptInstruction, myConceptMultiplication, myConceptNombre, myConceptOperationBinaire, myConceptProgramme, myConceptRefVariable);
+    return Arrays.asList(myConceptAddition, myConceptChaine, myConceptDeclarationVariable, myConceptEgalite, myConceptExpression, myConceptInstruction, myConceptLigneVide, myConceptMultiplication, myConceptNombre, myConceptOperationBinaire, myConceptProgramme, myConceptRefVariable);
   }
 
   @Override
@@ -57,6 +58,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptExpression;
       case LanguageConceptSwitch.Instruction:
         return myConceptInstruction;
+      case LanguageConceptSwitch.LigneVide:
+        return myConceptLigneVide;
       case LanguageConceptSwitch.Multiplication:
         return myConceptMultiplication;
       case LanguageConceptSwitch.Nombre:
@@ -83,8 +86,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("MPS.structure.OperationBinaire", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe047L);
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365256");
     b.version(2);
-    b.property("a", 0x2d7e4af03a801dc7L).type(PrimitiveTypeId.INTEGER).origin("3278139974406380999").done();
-    b.property("b", 0x2d7e4af03a801dcdL).type(PrimitiveTypeId.INTEGER).origin("3278139974406381005").done();
     b.alias("+");
     return b.create();
   }
@@ -95,6 +96,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406449760");
     b.version(2);
     b.property("valeur", 0x2d7e4af03a812a61L).type(PrimitiveTypeId.STRING).origin("3278139974406449761").done();
+    b.alias("\"");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDeclarationVariable() {
@@ -131,6 +133,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForLigneVide() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "LigneVide", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a837a7cL);
+    b.class_(false, false, false);
+    b.super_("MPS.structure.Instruction", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4b91L);
+    b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406601340");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForMultiplication() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MPS", "Multiplication", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe049L);
     b.class_(false, false, false);
@@ -155,8 +165,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("MPS.structure.Expression", 0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4fe4L);
     b.origin("r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)/3278139974406365255");
     b.version(2);
-    b.property("gauche", 0x2d7e4af03a80e1e3L).type(PrimitiveTypeId.INTEGER).origin("3278139974406431203").done();
-    b.property("droite", 0x2d7e4af03a80e1e5L).type(PrimitiveTypeId.INTEGER).origin("3278139974406431205").done();
+    b.aggregate("gauche", 0x2d7e4af03a837e92L).target(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe046L).optional(false).ordered(true).multiple(false).origin("3278139974406602386").done();
+    b.aggregate("droite", 0x2d7e4af03a837e94L).target(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7fe046L).optional(false).ordered(true).multiple(false).origin("3278139974406602388").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProgramme() {

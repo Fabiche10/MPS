@@ -16,10 +16,11 @@
       <concept id="3278139974406365254" name="MPS.structure.Nombre" flags="ng" index="n0qEQ">
         <property id="3278139974406365259" name="valeur" index="n0qEV" />
       </concept>
-      <concept id="3278139974406365256" name="MPS.structure.Addition" flags="ng" index="n0qES">
-        <property id="3278139974406380999" name="a" index="nZ_sR" />
-        <property id="3278139974406381005" name="b" index="nZ_sX" />
+      <concept id="3278139974406365255" name="MPS.structure.OperationBinaire" flags="ng" index="n0qER">
+        <child id="3278139974406602386" name="gauche" index="nZjhy" />
+        <child id="3278139974406602388" name="droite" index="nZjh$" />
       </concept>
+      <concept id="3278139974406365256" name="MPS.structure.Addition" flags="ng" index="n0qES" />
       <concept id="3278139974406449760" name="MPS.structure.Chaine" flags="ng" index="nZQ2g">
         <property id="3278139974406449761" name="valeur" index="nZQ2h" />
       </concept>
@@ -44,11 +45,15 @@
         <property role="n0qEV" value="42" />
       </node>
     </node>
-    <node concept="n0g5y" id="2PYiJ0Uw4iv" role="n0g5C">
-      <property role="TrG5h" value="addition" />
-      <node concept="n0qES" id="2PYiJ0Uw7zZ" role="n0gkt">
-        <property role="nZ_sR" value="12" />
-        <property role="nZ_sX" value="42" />
+    <node concept="n0g5y" id="i4OcEK9VM3" role="n0g5C">
+      <property role="TrG5h" value="add" />
+      <node concept="n0qES" id="i4OcEKa0si" role="n0gkt">
+        <node concept="n0qEQ" id="i4OcEKa0sk" role="nZjhy">
+          <property role="n0qEV" value="12" />
+        </node>
+        <node concept="n0qEQ" id="i4OcEKa0sm" role="nZjh$">
+          <property role="n0qEV" value="24" />
+        </node>
       </node>
     </node>
     <node concept="n0g5y" id="2PYiJ0UwwLr" role="n0g5C">

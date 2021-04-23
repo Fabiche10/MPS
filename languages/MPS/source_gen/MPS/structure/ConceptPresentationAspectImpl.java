@@ -15,6 +15,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Egalite;
   private ConceptPresentation props_Expression;
   private ConceptPresentation props_Instruction;
+  private ConceptPresentation props_LigneVide;
   private ConceptPresentation props_Multiplication;
   private ConceptPresentation props_Nombre;
   private ConceptPresentation props_OperationBinaire;
@@ -36,7 +37,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Chaine:
         if (props_Chaine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Chaine");
+          cpb.rawPresentation("\"");
           props_Chaine = cpb.create();
         }
         return props_Chaine;
@@ -66,6 +67,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Instruction = cpb.create();
         }
         return props_Instruction;
+      case LanguageConceptSwitch.LigneVide:
+        if (props_LigneVide == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("LigneVide");
+          props_LigneVide = cpb.create();
+        }
+        return props_LigneVide;
       case LanguageConceptSwitch.Multiplication:
         if (props_Multiplication == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -582,7 +582,7 @@
                 <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String)" resolve="matches" />
                 <uo k="s:originTrace" v="n:3278139974406536136" />
                 <node concept="Xl_RD" id="1Z" role="37wK5m">
-                  <property role="Xl_RC" value="^[a-zA-Z -]*$" />
+                  <property role="Xl_RC" value="^[a-zA-Z_$]*$" />
                   <uo k="s:originTrace" v="n:3278139974406536261" />
                 </node>
               </node>

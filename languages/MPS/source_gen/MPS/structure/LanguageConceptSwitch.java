@@ -15,11 +15,12 @@ public final class LanguageConceptSwitch {
   public static final int Egalite = 3;
   public static final int Expression = 4;
   public static final int Instruction = 5;
-  public static final int Multiplication = 6;
-  public static final int Nombre = 7;
-  public static final int OperationBinaire = 8;
-  public static final int Programme = 9;
-  public static final int RefVariable = 10;
+  public static final int LigneVide = 6;
+  public static final int Multiplication = 7;
+  public static final int Nombre = 8;
+  public static final int OperationBinaire = 9;
+  public static final int Programme = 10;
+  public static final int RefVariable = 11;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L);
@@ -29,6 +30,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x2d7e4af03a7fe04aL, Egalite);
     builder.put(0x2d7e4af03a7f4fe4L, Expression);
     builder.put(0x2d7e4af03a7f4b91L, Instruction);
+    builder.put(0x2d7e4af03a837a7cL, LigneVide);
     builder.put(0x2d7e4af03a7fe049L, Multiplication);
     builder.put(0x2d7e4af03a7fe046L, Nombre);
     builder.put(0x2d7e4af03a7fe047L, OperationBinaire);
