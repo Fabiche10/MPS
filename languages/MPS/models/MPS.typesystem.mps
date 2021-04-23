@@ -8,6 +8,7 @@
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="r95f" ref="r:adc272f0-20c8-46fb-833b-ce9fc5db4487(MPS.structure)" implicit="true" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -61,6 +62,9 @@
       </concept>
     </language>
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
+      <concept id="1185788614172" name="jetbrains.mps.lang.typesystem.structure.NormalTypeClause" flags="ng" index="mw_s8">
+        <child id="1185788644032" name="normalType" index="mwGJk" />
+      </concept>
       <concept id="1175517767210" name="jetbrains.mps.lang.typesystem.structure.ReportErrorStatement" flags="nn" index="2MkqsV">
         <child id="1175517851849" name="errorString" index="2MkJ7o" />
       </concept>
@@ -74,11 +78,20 @@
       <concept id="1174642788531" name="jetbrains.mps.lang.typesystem.structure.ConceptReference" flags="ig" index="1YaCAy">
         <reference id="1174642800329" name="concept" index="1YaFvo" />
       </concept>
+      <concept id="1174643105530" name="jetbrains.mps.lang.typesystem.structure.InferenceRule" flags="ig" index="1YbPZF" />
       <concept id="1174648085619" name="jetbrains.mps.lang.typesystem.structure.AbstractRule" flags="ng" index="1YuPPy">
         <child id="1174648101952" name="applicableNode" index="1YuTPh" />
       </concept>
       <concept id="1174650418652" name="jetbrains.mps.lang.typesystem.structure.ApplicableNodeReference" flags="nn" index="1YBJjd">
         <reference id="1174650432090" name="applicableNode" index="1YBMHb" />
+      </concept>
+      <concept id="1174657487114" name="jetbrains.mps.lang.typesystem.structure.TypeOfExpression" flags="nn" index="1Z2H0r">
+        <child id="1174657509053" name="term" index="1Z2MuG" />
+      </concept>
+      <concept id="1174658326157" name="jetbrains.mps.lang.typesystem.structure.CreateEquationStatement" flags="nn" index="1Z5TYs" />
+      <concept id="1174660718586" name="jetbrains.mps.lang.typesystem.structure.AbstractEquationStatement" flags="nn" index="1Zf1VF">
+        <child id="1174660783413" name="leftExpression" index="1ZfhK$" />
+        <child id="1174660783414" name="rightExpression" index="1ZfhKB" />
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
@@ -87,6 +100,9 @@
       </concept>
       <concept id="4693937538533521280" name="jetbrains.mps.lang.smodel.structure.OfConceptOperation" flags="ng" index="v3k3i">
         <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
+      </concept>
+      <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
+        <child id="1180636770616" name="createdType" index="3zrR0E" />
       </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
@@ -217,6 +233,60 @@
     <node concept="1YaCAy" id="i4OcEKa8L8" role="1YuTPh">
       <property role="TrG5h" value="programme" />
       <ref role="1YaFvo" to="r95f:2PYiJ0UvOIl" resolve="Programme" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="i4OcEKaGdR">
+    <property role="TrG5h" value="typeof_Nombre" />
+    <node concept="3clFbS" id="i4OcEKaGdS" role="18ibNy">
+      <node concept="1Z5TYs" id="i4OcEKaGuT" role="3cqZAp">
+        <node concept="mw_s8" id="i4OcEKaGvd" role="1ZfhKB">
+          <node concept="2ShNRf" id="i4OcEKaGv9" role="mwGJk">
+            <node concept="3zrR0B" id="i4OcEKaHEQ" role="2ShVmc">
+              <node concept="3Tqbb2" id="i4OcEKaHES" role="3zrR0E">
+                <ref role="ehGHo" to="tpee:f_0OMvX" resolve="FloatType" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="i4OcEKaGuW" role="1ZfhK$">
+          <node concept="1Z2H0r" id="i4OcEKaGdY" role="mwGJk">
+            <node concept="1YBJjd" id="i4OcEKaGfM" role="1Z2MuG">
+              <ref role="1YBMHb" node="i4OcEKaGdU" resolve="nombre" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="i4OcEKaGdU" role="1YuTPh">
+      <property role="TrG5h" value="nombre" />
+      <ref role="1YaFvo" to="r95f:2PYiJ0UvY16" resolve="Nombre" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="i4OcEKb0hc">
+    <property role="TrG5h" value="typeof_Chaine" />
+    <node concept="3clFbS" id="i4OcEKb0hd" role="18ibNy">
+      <node concept="1Z5TYs" id="i4OcEKb0t9" role="3cqZAp">
+        <node concept="mw_s8" id="i4OcEKb0tt" role="1ZfhKB">
+          <node concept="2ShNRf" id="i4OcEKb0tp" role="mwGJk">
+            <node concept="3zrR0B" id="i4OcEKb0$W" role="2ShVmc">
+              <node concept="3Tqbb2" id="i4OcEKb0$Y" role="3zrR0E">
+                <ref role="ehGHo" to="tpee:hP7QB7G" resolve="StringType" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="i4OcEKb0tc" role="1ZfhK$">
+          <node concept="1Z2H0r" id="i4OcEKb0hj" role="mwGJk">
+            <node concept="1YBJjd" id="i4OcEKb0j7" role="1Z2MuG">
+              <ref role="1YBMHb" node="i4OcEKb0hf" resolve="chaine" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="i4OcEKb0hf" role="1YuTPh">
+      <property role="TrG5h" value="chaine" />
+      <ref role="1YaFvo" to="r95f:2PYiJ0UwiDw" resolve="Chaine" />
     </node>
   </node>
 </model>
