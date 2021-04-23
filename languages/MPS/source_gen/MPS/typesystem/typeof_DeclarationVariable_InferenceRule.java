@@ -8,9 +8,10 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.typesystem.inference.EquationInfo;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class typeof_DeclarationVariable_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
@@ -20,7 +21,7 @@ public class typeof_DeclarationVariable_InferenceRule extends AbstractInferenceR
     {
       SNode _nodeToCheck_1029348928467 = declarationVariable;
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035216448", 0, null);
-      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035215782", true), (SNode) SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x11d47da71ecL, "jetbrains.mps.baseLanguage.structure.StringType")), _info_12389875345);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035215782", true), (SNode) typeCheckingContext.typeOf(SLinkOperations.getTarget(declarationVariable, LINKS.valeur$eNWJ), "r:2b8060cb-a9d0-4eff-bb46-cb6c8f2131b7(MPS.typesystem)", "325614642035399502", true), _info_12389875345);
     }
   }
   public SAbstractConcept getApplicableConcept() {
@@ -31,6 +32,10 @@ public class typeof_DeclarationVariable_InferenceRule extends AbstractInferenceR
   }
   public boolean overrides() {
     return false;
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink valeur$eNWJ = MetaAdapterFactory.getContainmentLink(0x193ba053c75c4c68L, 0x86ae9cea4678ede8L, 0x2d7e4af03a7f4b92L, 0x2d7e4af03a7f4fedL, "valeur");
   }
 
   private static final class CONCEPTS {

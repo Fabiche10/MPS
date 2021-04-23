@@ -24,6 +24,7 @@
         <child id="3278139974406602388" name="droite" index="nZjh$" />
       </concept>
       <concept id="3278139974406365256" name="MPS.structure.Addition" flags="ng" index="n0qES" />
+      <concept id="3278139974406601340" name="MPS.structure.LigneVide" flags="ng" index="nZj2c" />
       <concept id="3278139974406449760" name="MPS.structure.Chaine" flags="ng" index="nZQ2g">
         <property id="3278139974406449761" name="valeur" index="nZQ2h" />
       </concept>
@@ -72,11 +73,12 @@
       </node>
     </node>
     <node concept="n0g5y" id="i4OcEKbxD6" role="n0g5C">
-      <property role="TrG5h" value="nombres" />
-      <node concept="n0qEP" id="i4OcEKbCsX" role="n0gkt">
+      <property role="TrG5h" value="copie_b" />
+      <node concept="n0qEP" id="i4OcEKc7qb" role="n0gkt">
         <ref role="2OEuzB" node="2PYiJ0Uw1Qd" resolve="b" />
       </node>
     </node>
+    <node concept="nZj2c" id="i4OcEKc7o_" role="n0g5C" />
   </node>
 </model>
 
